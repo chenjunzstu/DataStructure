@@ -1,6 +1,8 @@
 TARGET = main
 SOURCES = main.c \
-LinearList.c
+LinearList.c \
+stack.c \
+queue.c
 
 CXX = gcc
 CXXFLAGS = -Og -g
