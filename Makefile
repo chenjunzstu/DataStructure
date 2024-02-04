@@ -2,7 +2,10 @@ TARGET = main
 SOURCES = main.c \
 LinearList.c \
 stack.c \
-queue.c
+queue.c \
+tree.c \
+graph.c \
+sort.c
 
 CXX = gcc
 CXXFLAGS = -Og -g

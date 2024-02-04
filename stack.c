@@ -39,6 +39,7 @@ bool link_pop(LinkStack *S)
         return false;
     }
     p = S->top;
+    S->top = p->next;
     free(p);
     return true;    
 }

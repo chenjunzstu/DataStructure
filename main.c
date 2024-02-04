@@ -1,43 +1,23 @@
 #include <stdio.h>
-#include "LinearList.h"
+#include "sort.h"
 
-void begin()
+Sqlist array = {
+    {0,2,4,9,88,69,94,99,1},
+    8
+};
+
+int tmp[20];
+void printSqlist(Sqlist L)
 {
-    printf("Thanks for checking!\n");
-    printf("This project achieves data structure for computer beginers by C.\n");
-    printf("You can communicate on issues if you find mistakes or have problems.\n");
-}
-void printSLList(Node *L)
-{
-    Node *p;
-    p = L->next;
-    printf("SLList data: ");
-    while(p->next)
+    for(int i = 1; i <= L.length; i++)
     {
-        printf("%d ", p->data);
-        p=p->next;
+        printf("%d ", L.r[i]);
     }
-    printf("%d ", p->data);
     printf("\n");
-}
-void printSeqlist(Seqlist L)
-{
-    for (int i = 0; i < L.listLength; i++)
-    {
-        if(i == 0)
-        {
-            printf("Data: ");
-        }
-        printf("%d ",L.data[i]);
-        if(i == L.listLength - 1)
-        {
-            printf("\n");
-        }
-    }
 }
 int main()
 {
-    begin();
-
+    quickSort(&array, 1, 8);
+    printSqlist(array);
     return 0;
 }
